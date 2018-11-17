@@ -1,2 +1,3 @@
 # blochacks2018
-Site made for Montreal BlocHacks 2018
+
+Anonymous CV generator for migrants arriving to Montreal
