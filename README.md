@@ -1,3 +1,3 @@
 # blochacks2018
 
-Anonymous CV generator for migrants arriving to Montreal
+CV generator for migrants arriving to Montreal or simply for first-timers at this whole resume and job application thing
