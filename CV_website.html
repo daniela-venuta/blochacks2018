@@ -9,7 +9,34 @@
         <!--imports components from Bootstrap (buttons, etc.)-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <!--go on Fontawesome to get the icon database(?)-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--I think this adjusts the header bar to the page width-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!--I think this allows us to get the colors we want for the header-->
     </head>
+
+    <!--text for the navigation bar-->   
+    <div class="navBar-bar navBar-border navBar-light-blue ">
+            <a href="#" class="navBar-bar-item navBar-light-blue navBar-border-right navBar-button navBar-light-grey navBar-hover-light-pink">Home</a>
+            <a href="#" class="navBar-bar-item navBar-light-blue navBar-border-right navBar-button navBar-light-grey navBar-hover-light-pink">Why use this</a>
+            <a href="#" class="navBar-bar-item navBar-light-blue navBar-border-right navBar-button navBar-light-grey navBar-hover-light-pink">About Us</a>
+    </div>
+    <h3>
+            What is GenericTeam0?
+       </h3>
+           <p>
+                GenericTeam0 is a group of four students who came together to work on cool projects.
+           </p>
+       
+       <h3>
+           Who is GenericTeam0?
+       </h3>
+            <p>
+            GenericTeam0 is composed of three software engineering students and one electrical engineering student, all currently studying at Concordia university.
+            </p>
+        <h3>
+
+        </h3>
 
     <title>
         CV Template Generator
@@ -17,8 +44,12 @@
         
     <body>
          <h1 class="otherHeader">
-             What does this webpage do?
+            CV Template Generator 
          </h1>
+
+         <h2 class="header">
+            What does this webpage do?
+         </h2>
             <p>
                 This webapge was created as a way to facilitate the creation of a ciriculum vitae (CV) for job applications.<br>
                 It targets anyone looking for a job, be it a student or a migrant unfamiliar with the employment process here in Montreal.
@@ -26,6 +57,7 @@
 
         <h2 class="header">
             Names and Contact Information
+            <i class="fas fa-address-card"></i>
         </h2>
         <p class="content"> 
             -Basic information that you can be reached at within a reasonable amount of time<br>
@@ -85,7 +117,7 @@
             </p>
 
          <div class="class">
-            <input type="textArea" class="newLicenceAndCertification" placeholder="Add a license or certification..." id="newLicenceAndCertificationContent" required/>
+            <input type="textArea" class="newLicenceAndCertification" placeholder="Add a license or certification..." id="newLicenceAndCertificationContent"/>
             <button class="addLicenseOrCertification">
                     <i class="far fa-plus-square"></i>
             </button>
@@ -294,7 +326,7 @@
                     <i class="far fa-minus-square"></i>
                 </button><br><br>
                 
-                -Relevant extracurriculars<br>
+                -Relevant extracurriculars <i class="fab fa-algolia"></i><br>
                 <input type="textArea" class="newExtracurricular" placeholder="Add an extracurricular..." id="newCurricularContent"> 
                 <button class="addExtracurricular">
                         <i class="far fa-plus-square"></i>
@@ -315,7 +347,7 @@
                 &emsp; &emsp; -Recognizable title<br>
                 &emsp; &emsp; -List of tasks and project you completed relevant to the position<br>
                 &emsp; &emsp; -Use the past tense&emsp;(example: Translated oral communications for peers who lacked a common language)
-            </p> <br>
+            </p>
          <div class="class">
             <input type="textArea" class="newWorkExperience" placeholder="Add the name of the most recent company you have worked for..." id="newWorkExperienceContent"required />
             <select name="start month">
