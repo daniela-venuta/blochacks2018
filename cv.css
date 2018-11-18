@@ -6,45 +6,44 @@
     color: #000000;
     font-weight: 700;
     text-decoration: none solid rgb(68, 68, 68);
-    font-style: italic;
+    font-style: normal;
     font-variant: small-caps;
     text-transform: capitalize;
 }
 
 .class{ /*header*/
-    width:100%;
-    max-width: 1500px;
-    background: rgb(118, 188, 190); /* default CSS, RGB, color system with #reference */
+    width:900px;
+    background: rgb(98, 205, 209); /* default CSS, RGB, color system with #reference */
     padding: 20px; /*tells browser to put certain amount of spacing between div and inner contents*/
-    border-radius: 4px;
+    border-radius: 8px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .content{ /*paragraph*/
-    width:100%;
-    max-width: 1500px;
-    background: rgb(118, 188, 190); /* default CSS, RGB, color system with #reference */
+    width:1300px;
+    background: rgb(28, 180, 185); /* default CSS, RGB, color system with #reference */
     padding: 20px; /*tells browser to put certain amount of spacing between div and inner contents*/
-    border-radius: 4px;
-    margin-top: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-left:15px;
 }
 
 .otherHeader{ /* title*/
     width:100%;
-    max-width: 900px;
-    background: rgb(118, 188, 190); /* default CSS, RGB, color system with #reference */
+    max-width: 2000px;
+    background: rgb(64, 156, 209); /* default CSS, RGB, color system with #reference */
     padding: 20px; /*tells browser to put certain amount of spacing between div and inner contents*/
-    border-radius: 4px;
     margin-top: 20px;
     margin: auto;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 40px;
     letter-spacing: 2px;
     word-spacing: 2px;
-    color:blanchedalmond;
+    color:rgb(255, 255, 255);
     font-weight: 700;
     text-decoration: none solid rgb(68, 68, 68);
-    font-style: italic;
+    font-style: normal;
     font-variant: small-caps;
     text-transform: capitalize;
     text-align: center;
