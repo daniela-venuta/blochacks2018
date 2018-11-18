@@ -39,7 +39,7 @@
         <li><a href="About Us">About Us</a></li>
     </ul>
     <br>
-    <h3>
+        <h3>
             What is GenericTeam0?
        </h3>
            <p>
@@ -79,26 +79,31 @@
         </h2>
         <p class="content"> 
             -Basic information that you can be reached at within a reasonable amount of time<br>
-                <form>
-                        <i class="fas fa-user"></i>&emsp;Full name:<br>
-                        <input type="text" name="fullname"required/><br>
-                        <i class="fas fa-at">&emsp;</i>E-mail address:</i><br>
-                        <input type="email" name="E-mail" required/><br>
-                        <i class="fas fa-phone-square">&emsp;</i>Phone number:</i><br>
-                        <input type="tel" name="phonenumber" required/>
-                            <select name="type">
-                                <option value="Mobile">Mobile</option>    
-                                <option value="Home">Home</option>
-                                <option value="Work">Work</option>
-                            </select>
-                        <button class="addNumber">
-                            <i class="far fa-plus-square"></i>
-                        </button>
-                        <button class="removeNumber">
-                            <i class="far fa-minus-square"></i>
-                        </button><br>
-
-                </form>
+                <div class="class">
+                        <form>
+                                <i class="fas fa-user"></i>&emsp;Full name:<br>
+                                <input type="text" name="fullname"required/><br><br>
+                                <i class="fas fa-at">&emsp;</i>E-mail address:</i><br>
+                                <input type="email" name="E-mail" required/><br><br>
+                                <i class="fas fa-phone-square">&emsp;</i>Phone number:</i>
+                               <!--
+                                   <input type="tel" name="phonenumber" required/>
+                                    <select name="type">
+                                        <option value="Mobile">Mobile</option>    
+                                        <option value="Home">Home</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                -->
+                                <p id=test></p>
+                                <button class="addNumber" onclick="addNum()">
+                                    <i class="far fa-plus-square"></i>
+                                </button>
+                                <button class="removeNumber" onclick="removeNum()">
+                                    <i class="far fa-minus-square"></i>
+                                </button><br>
+        
+                        </form>
+                </div>
         </p>
 
          <h2 class="header">
@@ -552,6 +557,56 @@
                     <i class="far fa-minus-square"></i>
                 </button>
          </div>
+
+         <!--code for the add/substract phone numbers-->
+         <script>
+                //variables
+                var i= 0;
+                var container = document.getElementById("test");
+                addNum();
+                function addNum() {
+                    if (i<3) {
+                        i++;
+                        // Create an <input> element, set its type and name attributes
+                        var input = document.createElement("input");
+                        input.type = "tel";
+                        input.name = "phone"+ i;
+                        container.appendChild(input);
+                            
+                        //select object
+                        var select = document.createElement("select");
+                        select.id = "mySelect"+ i; 
+                        container.appendChild(select);
+                        //options
+                        var option1 = document.createElement("option");
+                        option1.value = "home";
+                        var option1t = document.createTextNode("Home");
+                        option1.appendChild(option1t);
+                        var option2 = document.createElement("option");
+                        option2.value = "cell";
+                        var option2t = document.createTextNode("Cell");
+                        option2.appendChild(option2t);
+                        var option3 = document.createElement("option");
+                        option3.value = "work";
+                        var option3t = document.createTextNode("Work");
+                        option3.appendChild(option3t);
+                        select.appendChild(option1);
+                        select.appendChild(option2);
+                        select.appendChild(option3);
+                        container.appendChild(document.createElement("br"));
+                    }
+                }
+                    
+                function removeNum() {
+                    if (i>1){
+                        i--;
+                        container.removeChild(container.lastChild);
+                        container.removeChild(container.lastChild);
+                        container.removeChild(container.lastChild);
+                        container.removeChild(container.lastChild);
+                    }
+                }
+            </script>
     </body>
 
 </html>
