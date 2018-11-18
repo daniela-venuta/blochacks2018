@@ -9,10 +9,6 @@
         <!--imports components from Bootstrap (buttons, etc.)-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <!--go on Fontawesome to get the icon database(?)-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--I think this adjusts the header bar to the page width-->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <!--I think this allows us to get the colors we want for the header-->
     </head>
 
     <!--style for the navBar-->
@@ -24,15 +20,11 @@
                     padding:0;
                     overflow: hidden;
                     background-color:lightblue;
-                    position: sticky;
                 }
                 li{
-                    display: inline;
-                    float: left;
+                    float: left;}
+                li{
                     border-right:1px solid black;
-                }
-                li:last-child{
-                    border-right:none;
                 }
                 li a{
                     display: block;
@@ -40,6 +32,9 @@
                     text-align: center;
                     padding: 14px 16px;
                     text-decoration: none;
+                }
+                li a:hover{
+                    background-color: lightblue;
                 }
                 li a:hover,.dropdown:hover .dropbtn {
                     background-color:rgba(224, 241, 236, 0.932);
@@ -69,9 +64,7 @@
                     display: block;
                     text-align: left;
                 }
-                .dropdown-content a:hover {
-                    background-color: #f1f1f1;
-                }
+                .dropdown-content a:hover {background-color: #f1f1f1}
                 .dropdown:hover .dropdown-content{
                     display: block;
                 }
@@ -84,23 +77,16 @@
         
     <body>
         <!--text for the navigation bar-->
-    <ul>
-        <li><a class="active">Home</a></li>
-        <li><a>Why Use This</a></li>
-        <li class="dropdown">
-            <a class="dropbtn">About Us<a>
-            <div class="dropdown-content">
-                <a style="font-size:90%;">What is GenericTeam0?</a>
-                    <a style="font-size:70%;">
-                        GenericTeam0 is a group of four students who came together to work on cool projects.
-                    </a>
-                <a style="font-size:90%;">Who is GenericTEam0?</a>
-                     <a style="font-size:70%;">
-                        GenericTeam0 is composed of three software engineering students as well as one electrical engineering student, all currently studying at Concordia university.
-                     </a>
-            </div>
-        </li>
-    </ul>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>Why use this?</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">About Us!</a>
+                <div class="dropdown-content">
+                    <a>test</a>
+                </div>
+            </li>
+        </ul>
 
         <!--code for the main body-->
 
