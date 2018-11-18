@@ -9,6 +9,7 @@
     font-style: normal;
     font-variant: small-caps;
     text-transform: capitalize;
+    margin-left: 15px;
 }
 
 .class{ /*header*/
