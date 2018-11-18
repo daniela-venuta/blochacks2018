@@ -1,4 +1,4 @@
-.header{
+.header{ /*subtitles*/
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 30px;
     letter-spacing: 2px;
@@ -29,11 +29,30 @@
     margin-top: 20px;
 }
 
-.otherHeader{ /* subtitles*/
+.otherHeader{ /* title*/
     width:100%;
-    max-width: 1500px;
+    max-width: 900px;
     background: rgb(118, 188, 190); /* default CSS, RGB, color system with #reference */
     padding: 20px; /*tells browser to put certain amount of spacing between div and inner contents*/
     border-radius: 4px;
     margin-top: 20px;
+    margin: auto;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color:blanchedalmond;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.navBar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
 }
