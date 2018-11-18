@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+
+<body>
+    
+    <button onclick="addEd()">+</button>
+    <button onclick="removeEd()">-</button>
+    <br>
+    <p id=test></p>
+    
+    <script>
+        //variables
+        var i= 0;
+        var container = document.getElementById("test");
+        addEd();
+
+        function addEd() {
+            i++;
+
+            // Create an <input> element, set its type and name attributes
+            var work = document.createElement("input");
+            work.type = "text";
+            work.name = "work"+ i;
+            work.placeholder = "Workplace"
+            container.appendChild(work);
+                
+            var pos = document.createElement("input");
+            pos.type = "text";
+            pos.name = "pos"+ i;
+            pos.placeholder = "Position occupied"
+            container.appendChild(pos);
+
+            var wstart = document.createElement("input");
+            wstart.type = "month";
+            wstart.name = "wstart"+ i;
+            container.appendChild(wstart);
+
+            var wend = document.createElement("input");
+            wend.type = "month";
+            wend.name = "wend"+ i;
+            container.appendChild(wend);
+
+            // Append a line break
+            container.appendChild(document.createElement("br"));        
+        }
+            
+        function removeEd() {
+            if (i>1){
+                i--;
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>
