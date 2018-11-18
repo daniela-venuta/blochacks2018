@@ -98,7 +98,7 @@
          <h2 class="header">
             What does this webpage do?
          </h2>
-            <p>
+            <p class = "content">
                 This webapge was created as a way to facilitate the creation of a ciriculum vitae (CV) for job applications.<br>
                 It targets anyone looking for a job, be it a student or a migrant unfamiliar with the employment process here in Montreal.
             </p>
@@ -233,7 +233,7 @@
                 </button>
          </div>
 
-         <button class="submitAll" onclick="convertToPDF">
+         <button class="submitAll" id = "goodbutton" onclick="convertToPDF">
              Submit
             <i class="far fa-check-circle"></i>
          </button>
@@ -428,6 +428,38 @@
                         }
                         
                     </script>
+
+                    
+	<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js" 
+  integrity="sha256-vIL0pZJsOKSz76KKVCyLxzkOT00vXs+Qz4fYRVMoDhw="
+  crossorigin="anonymous">
+</script>
+
+<script>
+
+    // init the jsPDF library
+    const pdf = new jsPDF();
+
+    // select the button
+    let button = document.querySelector("goodbutton");
+    // select the input
+    let input = document.querySelector('input');
+
+    // add 'click' event listener for the button
+    button.addEventListener('click', printPDF)
+
+    // actual PDF optionse
+    function printPDF() {
+
+        pdf.text(20, 20, `\n${input.value}`);
+
+        // save the PDF document (downloadable)
+        pdf.save();
+
+    }
+
+</script>
     </body>
 
 </html>
