@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+
+<body>
+    
+    <button onclick="addNum()">+</button>
+    <button onclick="removeNum()">-</button>
+    <br>
+    <p id=test></p>
+    
+    <script>
+        //variables
+        var i= 0;
+        var container = document.getElementById("test");
+        addNum();
+
+        function addNum() {
+            if (i<3) {
+                i++;
+                // Append a line break
+                container.appendChild(document.createElement("br"));
+
+                container.appendChild(document.createTextNode("Phone " + i));
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "tel";
+                input.name = "phone"+ i;
+                container.appendChild(input);
+                    
+                //select object
+                var select = document.createElement("select");
+                select.id = "mySelect"+ i; 
+                container.appendChild(select);
+
+                //options
+                var option1 = document.createElement("option");
+                option1.value = "home";
+                var option1t = document.createTextNode("Home");
+                option1.appendChild(option1t);
+
+                var option2 = document.createElement("option");
+                option2.value = "cell";
+                var option2t = document.createTextNode("Cell");
+                option2.appendChild(option2t);
+
+                var option3 = document.createElement("option");
+                option3.value = "work";
+                var option3t = document.createTextNode("Work");
+                option3.appendChild(option3t);
+
+                select.appendChild(option1);
+                select.appendChild(option2);
+                select.appendChild(option3);
+            }
+        }
+            
+        function removeNum() {
+            if (i>1){
+                i--;
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+            }
+        }
+    </script>
+</body>
+
+</html>
