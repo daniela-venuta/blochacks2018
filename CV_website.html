@@ -24,10 +24,10 @@
                 It targets anyone looking for a job, be it a student or a migrant unfamiliar with the employment process here in Montreal.
             </p>
 
-        <h2>
+        <h2 class="header">
             Names and Contact Information
         </h2>
-        <p>
+        <p class="container"> 
             -Basic information that you can be reached at within a reasonable amount of time<br>
                 <form>
                         <i class="fas fa-user"></i>&emsp;Name:<br>
@@ -37,21 +37,22 @@
                         <i class="fas fa-phone-square">&emsp;</i>Phone number:</i><br>
                         <input type="text" name="phonenumber" required/>
                             <select name="type">
-                                <option value="Cellphone">Cellphone</option>    
-                                <option value="Home phone">Home phone</option>
+                                <option value="Mobile">Mobile</option>    
+                                <option value="Home">Home</option>
+                                <option value="Work">Work</option>
                             </select>
                         <button class="addNumber">
                             <i class="far fa-plus-square"></i>
                         </button><br>
 
-                      </form>
+                </form>
         </p>
 
-         <h2>
+         <h2 class="header">
              Written and Spoken Languages
              <i class="fas fa-language"></i>
          </h2>
-            <p>
+            <p class="container">
                 List the languages you have a good command of and specifiy, in parentheses, whether it applies to the written or spoken language.<br>
                 &emsp; Example:<br>
                 &emsp; &emsp; English (written and spoken) <br>
@@ -59,27 +60,29 @@
             </p>
          
          <!--defines a divison/section in the HTML doc-->
-         <div class="newLanguageContainer"> 
+         <div class="class"> 
             <input type="textArea" class="newLanguage" placeholder="Add a language..." id="newLanguageContent" required/>
          </div>
 
-         <h2>
+         <h2 class="header">
              Licences and Certifications
              <i class="fas fa-certificate"></i>
          </h2>
-            <p>
-                List the licences and certifications you hold.
+            <p class="container">
+                List the licences and certifications you hold.<br>
+                &emsp; Example:<br>
+                &emsp; &emsp; Valid driving permit
             </p>
 
-         <div class="newLicenceAndCertificationContainer">
+         <div class="class">
             <input type="textArea" class="newLicenceAndCertification" placeholder="Add a license or certification..." id="newLicenceAndCertificationContent" required/>
          </div>
 
-         <h2>
-             Education!
+         <h2 class="header">
+             Education
              <i class="fas fa-graduation-cap"></i>
          </h2>
-            <p>
+            <p class="container">
                 -From most to least recent, list your educational background<br>
                 -Relevant extracurriculars<br>
                 -Dates are required<br>
@@ -90,7 +93,7 @@
                 &emsp; &emsp;September 2014-2018 <br>
 
             </p>
-         <div class="newSchoolContainer">
+         <div class="class">
             <input type="textArea" class="newSchool" placeholder="Add a school name..." id="newSchoolContent"required />
             <select name="start month">
                 <option value="January">January</option>
@@ -270,18 +273,18 @@
                 </select>
          </div>
 
-         <h2>
+         <h2 class="header">
              Work Experience
              <i class="fas fa-briefcase"></i>
          </h2>
-            <p>
+            <p class="container">
                 From most to least recent, list your previous work experiences (company name and postion you occupied, as well as the time frame in which you worked for that company).
                 To include:<br>
                 -Recognizable title<br>
                 -List of tasks and project you completed relevant to the position<br>
                 -Use the past tense&emsp;(example: Translated oral communications for peers who lacked a common language)
             </p> <br>
-         <div class="newWorkExperienceContainer">
+         <div class="class">
             <input type="textArea" class="newWorkExperience" placeholder="Add the name of the most recent company you have worked for..." id="newWorkExperienceContent"required />
             <select name="start month">
                     <option value="January">January</option>
