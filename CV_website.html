@@ -27,7 +27,7 @@
                 li{
                     border-right:1px solid black;
                 }
-                li a{
+                li a, {
                     display: block;
                     color: black;
                     text-align: center;
@@ -79,14 +79,27 @@
     <body>
         <!--text for the navigation bar-->
         <ul>
-            <li><a>Home</a></li>
+             <li><a>Home</a></li>
             <li><a>Why use this?</a></li>
-            <li class="dropdown">
-                <a class="dropbtn">About Us!</a>
-                <div class="dropdown-content">
-                    <a>test</a>
-                </div>
-            </li>
+                <li class="dropdown">
+                <a class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li class="dropdown">
+                                <a class="dropbtn">What is GenericTeam0?</a>
+                                <div class="dropdown-content">
+                                    <a>GenericTeam0 is a group of four students who came together to work on cool projects</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropbtn">Who is GenericTeam0?</a>
+                                <div class="dropdown-content">
+                                    <a>GenericTeam0 is composed of three software engineering students as well as one electrical engineering student, all currently studying at Concordia university.</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
         </ul>
 
         <!--code for the main body-->
@@ -97,8 +110,9 @@
 
          <h2 class="header">
             What does this webpage do?
+            <i class="far fa-comment-alt"></i>
          </h2>
-            <p class = "content">
+            <p class="content">
                 This webapge was created as a way to facilitate the creation of a ciriculum vitae (CV) for job applications.<br>
                 It targets anyone looking for a job, be it a student or a migrant unfamiliar with the employment process here in Montreal.
             </p>
@@ -108,7 +122,8 @@
             <i class="fas fa-address-card"></i>
         </h2>
         <p class="content"> 
-            -Basic information that you can be reached at within a reasonable amount of time<br>
+            <i class="fas fa-pencil-alt"></i>
+            Basic information that you can be reached at within a reasonable amount of time<br>
                 <div class="class">
                         <form>
                             <i class="fas fa-user"></i>&emsp;Full name:<br>
@@ -124,7 +139,7 @@
                                     <option value="Work">Work</option>
                                 </select>
                             -->
-                            <p id=test></p>
+                            <p id=phone></p>
                             <button class="addNumber" onclick="addNum()">
                                 <i class="far fa-plus-square"></i>
                             </button>
@@ -141,10 +156,10 @@
              <i class="fas fa-language"></i>
          </h2>
             <p class="content">
-                List the languages you have a good command of and specifiy, in parentheses, whether it applies to the written or spoken language.<br>
+                    <i class="fas fa-pencil-alt"></i> List the languages you have a good command of and specifiy, in parentheses, whether it applies to the written or spoken language.<br>
                 &emsp; Example:<br>
-                &emsp; &emsp; English (written and spoken) <br>
-                &emsp; &emsp; French (spoken)<br>
+                &emsp; &emsp; -English (written and spoken) <br>
+                &emsp; &emsp; -French (spoken)<br>
             </p>
          
          <!--defines a divison/section in the HTML doc-->
@@ -163,10 +178,10 @@
              <i class="fas fa-certificate"></i>
          </h2>
             <p class="content">
-                List the licences and certifications you hold.<br>
+                <i class="fas fa-pencil-alt"></i> List the licences and certifications you hold.<br>
                 &emsp; Example:<br>
-                &emsp; &emsp; Valid driving permit<br>
-                &emsp; &emsp; CPR certification
+                &emsp; &emsp; -Valid driving permit<br>
+                &emsp; &emsp; -CPR certification
             </p>
 
          <div class="class">
@@ -184,12 +199,12 @@
              <i class="fas fa-graduation-cap"></i>
          </h2>
             <p class="content">
-                -From most to least recent, list your educational background<br>
+                <i class="fas fa-pencil-alt"></i> From most to least recent, list your educational background<br>
                 -Dates are required (start date on the left and end date on the right)<br>
                 &emsp;Example:<br>
-                &emsp; &emsp;Undergraduate<br>				   
-                &emsp; &emsp;Electrical Engineering<br>			 
-                &emsp; &emsp;September 2014-2018 <br>
+                &emsp; &emsp;-Undergraduate<br>				   
+                &emsp; &emsp;-Electrical Engineering<br>			 
+                &emsp; &emsp;-September 2014-2018 <br>
             </p>
          <div class="class">
             <p id=education></p>    
@@ -217,8 +232,8 @@
              <i class="fas fa-briefcase"></i>
          </h2>
             <p class="content">
-                From most to least recent, list your previous work experiences (company name and postion you occupied, as well as the time frame in which you worked for that company).<br>
-                &emsp; To include:<br>
+                <i class="fas fa-pencil-alt"></i> From most to least recent, list your previous work experiences (company name and postion you occupied, as well as the time frame in which you worked for that company).<br>
+                &emsp; Guidelines:<br>
                 &emsp; &emsp; -Recognizable title<br>
                 &emsp; &emsp; -List of tasks and project you completed relevant to the position<br>
                 &emsp; &emsp; -Use the past tense &emsp;(example: Translated oral communications for peers who lacked a common language)
@@ -242,7 +257,7 @@
          <script>
                 //variables
                 var i= 0;
-                var container = document.getElementById("test");
+                var container = document.getElementById("phone");
                 addNum();
                 function addNum() {
                     if (i<3) {
@@ -285,6 +300,53 @@
                         container.removeChild(container.lastChild);
                     }
                 }
+            </script>
+
+            <!--code to add/substract languages-->
+            <script>
+                    var i=0;
+                    var container = document.getElementById(languages)
+                    addLang();
+                    function addLang() {
+                        if (i>0){
+                            //create <input> element set its type and name attributes
+                            var input = document.createElement("language");
+                            input.type = "text";
+                            input.name = "language"+ i;
+                            container.appendChild(input);		
+                        }
+                    }
+                    
+                    function removeLang() {
+                        if (i>1){
+                            i--;
+                            container.removeChild(container.lastChild);
+                            container.removeChild(container.lastChild);
+                            container.removeChild(container.lastChild);
+                        }
+                    }
+            </script>
+
+            <!--code to add/substract license or certifications-->
+            <script>
+                    var i=0;
+                    var container = document.getElementByID(LicencesAndCertifications)
+                    addLicenceAndCertification();
+                    function addLicenceAndCertification() {
+                        if (i>=0){
+                        var input = document.createElement("LicenceAndCertification");
+                        input.type= "text";
+                        input.name="LicenceAndCertification" + i;
+                        container.appendChild(input);
+                        }
+                    function removeLicenceAndCertification() {
+                        if (i>=0) {
+                            i--;
+                            container.removeChild(container.lastChild);
+                            container.removeChild(container.lastChild);
+                            container.removeChild(container.lastChild);
+                        }
+                    }
             </script>
 
             <!--code for the add/substract education sequence-->
@@ -348,13 +410,13 @@
                         var work = document.createElement("input");
                         work.type = "text";
                         work.name = "work"+ i;
-                        work.placeholder = "Workplace"
+                        work.placeholder = "Add a company name..."
                         container.appendChild(work);
                             
                         var pos = document.createElement("input");
                         pos.type = "text";
                         pos.name = "pos"+ i;
-                        pos.placeholder = "Position occupied"
+                        pos.placeholder = "Add a position you occuppied..."
                         container.appendChild(pos);
                         var wstart = document.createElement("input");
                         wstart.type = "month";
