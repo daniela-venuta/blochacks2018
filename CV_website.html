@@ -16,11 +16,29 @@
     </head>
 
     <!--text for the navigation bar-->   
-    <div class="navBar-bar navBar-border navBar-light-blue ">
-            <a href="#" class="navBar-bar-item navBar-light-blue navBar-border-right navBar-button navBar-light-grey navBar-hover-light-pink">Home</a>
-            <a href="#" class="navBar-bar-item navBar-light-blue navBar-border-right navBar-button navBar-light-grey navBar-hover-light-pink">Why use this</a>
-            <a href="#" class="navBar-bar-item navBar-light-blue navBar-border-right navBar-button navBar-light-grey navBar-hover-light-pink">About Us</a>
-    </div>
+    <style>
+        li{
+        display: inline;
+        display: block;
+        padding: 8px;
+        background-color: #ADD8E6; 
+        float: left;
+        border-right: 1px solid #000000;
+    }
+        li: last-child{
+            border-right: none;
+        }
+        ul{
+            position: sticky;
+            top:0;
+        }
+    </style>
+    <ul>
+        <li><a href="Home">Home</a></li>
+        <li><a href="Why Use This">Why Use This</a></li>
+        <li><a href="About Us">About Us</a></li>
+    </ul>
+    <br>
     <h3>
             What is GenericTeam0?
        </h3>
