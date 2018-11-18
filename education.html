@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+
+<body>
+    
+    <button onclick="addEd()">+</button>
+    <button onclick="removeEd()">-</button>
+    <br>
+    <p>ESTABLISHMENT &emsp; &emsp; PROGRAM &emsp; &emsp; &emsp; &emsp; &nbsp; ENROLLED &emsp; &emsp; &emsp; &emsp; &nbsp; GRADUATION</p>
+    <p id=test></p>
+    
+    <script>
+        //variables
+        var i= 0;
+        var container = document.getElementById("test");
+        addEd();
+
+        function addEd() {
+            if (i<10) {
+                i++;
+
+                // Create an <input> element, set its type and name attributes
+                var ed = document.createElement("input");
+                ed.type = "text";
+                ed.name = "ed"+ i;
+                container.appendChild(ed);
+
+                var prog = document.createElement("input");
+                prog.type = "text";
+                prog.name = "prog"+ i;
+                container.appendChild(prog);
+                
+                var start = document.createElement("input");
+                start.type = "month";
+                start.name = "start"+ i;
+                container.appendChild(start);
+
+                var end = document.createElement("input");
+                end.type = "month";
+                end.name = "end"+ i;
+                container.appendChild(end);
+
+                // Append a line break
+                container.appendChild(document.createElement("br"));        
+            }
+        }
+            
+        function removeEd() {
+            if (i>1){
+                i--;
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>
