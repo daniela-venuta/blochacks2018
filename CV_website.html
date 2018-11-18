@@ -11,7 +11,7 @@
         <!--go on Fontawesome to get the icon database(?)-->
     </head>
 
-    <title>
+    <title class="title">
         CV Template Generator
     </title>
         
@@ -71,8 +71,8 @@
             <p class="content">
                 List the licences and certifications you hold.<br>
                 &emsp; Example:<br>
-                &emsp; &emsp; Valid driving permit
-                &emsp; 
+                &emsp; &emsp; Valid driving permit<br>
+                &emsp; &emsp; CPR certification
             </p>
 
          <div class="class">
@@ -95,7 +95,13 @@
 
             </p>
          <div class="class">
+             <select name="academic level">
+                    <option value="University">University</option>   
+                    <option value="Cegep">Cegep</option> 
+                    <option value="High school">High School</option>  
+            </select>
             <input type="textArea" class="newSchool" placeholder="Add a school name..." id="newSchoolContent"required />
+            <input type="textArea" class="newProgram" placeholder="Add a program name..." id="newProgramContent">
             <select name="start month">
                 <option value="January">January</option>
                 <option value="February">February</option>
