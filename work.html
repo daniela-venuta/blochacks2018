@@ -6,8 +6,8 @@
 
 <body>
     
-    <button onclick="addEd()">+</button>
-    <button onclick="removeEd()">-</button>
+    <button onclick="addWork()">+</button>
+    <button onclick="removeWork()">-</button>
     <br>
     <p id=test></p>
     
@@ -15,9 +15,9 @@
         //variables
         var i= 0;
         var container = document.getElementById("test");
-        addEd();
+        addWork();
 
-        function addEd() {
+        function addWork() {
             i++;
 
             // Create an <input> element, set its type and name attributes
@@ -47,7 +47,7 @@
             container.appendChild(document.createElement("br"));        
         }
             
-        function removeEd() {
+        function removeWork() {
             if (i>1){
                 i--;
                 container.removeChild(container.lastChild);

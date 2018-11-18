@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+
+<body>
+    
+    <button onclick="addEx()">+</button>
+    <button onclick="removeEx()">-</button>
+    <br>
+    <p id=extracuricular></p>
+    
+    <script>
+        //variables
+        var i= 0;
+        var container = document.getElementById("extracuricular");
+        addEx();
+
+        function addEx() {
+            i++;
+
+            // Create an <input> element, set its type and name attributes
+            var extra = document.createElement("input");
+            extra.type = "text";
+            extra.name = "extra"+ i;
+            container.appendChild(extra);
+
+            var estart = document.createElement("input");
+            estart.type = "month";
+            estart.name = "estart"+ i;
+            container.appendChild(estart);
+
+            var eend = document.createElement("input");
+            eend.type = "month";
+            eend.name = "eend"+ i;
+            container.appendChild(eend);
+
+            var exex = document.createElement("input");
+            exex.type = "text";
+            exex.name = "exex"+ i;
+            exex.placeholder = "details";
+            container.appendChild(exex);
+
+            // Append a line break
+            container.appendChild(document.createElement("br"));        
+        }
+            
+        function removeEx() {
+            if (i>1){
+                i--;
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+                container.removeChild(container.lastChild);
+            }
+        }
+
+        
+    </script>
+</body>
+
+
+</html>
