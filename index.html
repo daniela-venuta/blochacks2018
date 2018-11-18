@@ -27,7 +27,7 @@
 <body>
 
 
-	<input type="text" placeholder="name your price" />
+	<input type="text" placeholder="WE NEED OUR BUTTONS HERE" />
 
 	<hr />
 
@@ -59,7 +59,7 @@
 			// @param 1 - Coordinate (in units declared at inception of PDF document) against left edge of the page
 			// @param 2 - Coordinate (in units declared at inception of PDF document) against upper edge of the page
 			// @param 3 - String or array of strings to be added to the page. Each line is shifted one line down per font, spacing settings declared before this call.
-			pdf.text(10, 10, `You have to pay ${input.value}$`);
+			pdf.text(20, 20, `This is a test!\n${input.value}`);
 
 			// save the PDF document (downloadable)
 			pdf.save();
