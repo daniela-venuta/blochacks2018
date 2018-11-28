@@ -1,3 +1,8 @@
-# blochacks2018
+# Blochacks2018
+## CV Template Generator project
+##### Made by Daniela Venuta, Émilie Martin, Minh-Tam Do, Kevin Sidhu
 
-CV generator for migrants arriving to Montreal or simply for first-timers at this whole resume and job application thing
+>First hackathon participation
+-**Used HTML, CSS, JS
+
+CV generator for migrants arriving to Montreal or simply for first job applicants
